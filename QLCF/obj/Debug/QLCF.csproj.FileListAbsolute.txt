@@ -1,0 +1,96 @@
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.exe
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.pdb
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.exe
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.pdb
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.exe
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.pdb
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.exe
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.pdb
+C:\Users\hophu\Documents\Zalo Received Files\HEQUATRICOSODULIEU\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.LogIn.resources
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.exe
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.pdb
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.exe
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\QLCF\QLCF\bin\Debug\QLCF.pdb
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\obj\Debug\QLCF.exe
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\obj\Debug\QLCF.pdb
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\bin\Debug\QLCF.exe
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\bin\Debug\QLCF.pdb
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\User\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.exe
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.pdb
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe
+C:\Users\Tinhs\Desktop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.pdb
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.exe
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.pdb
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.pdb
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.CTHD.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Hoadon.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Khachhang.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.SanPham.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DSQUANLY.resources
+C:\Users\Tinhs\Desktop\HEQUATRICOSODULIEU\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.exe
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.pdb
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.pdb
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.CTHD.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DSQUANLY.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Hoadon.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Khachhang.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.SanPham.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.exe
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.pdb
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.pdb
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.CTHD.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DSQUANLY.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Hoadon.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Khachhang.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.SanPham.resources
+C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
