@@ -122,8 +122,9 @@ namespace QLCF
             //try
             //{
                 cnn.Open();
-                string sql = @"Insert Into HOADON VALUES ('" + txt_mahd.Text + @"',N'" + int.Parse(txt_manv.Text)  + @"','" + null + @"','" + tongTien_txt.Text + @"','" + dt_ngaymua.Value + @"','" + txt_chuthich.Text + @"')";
-                SqlCommand com = new SqlCommand(sql, cnn);
+            string sql = @"Insert Into HOADON VALUES ('" + txt_mahd.Text + @"',N'" + txt_manv.Text + @"','" + txt_makh.Text + @"','" + tongTien_txt.Text + @"','" + dt_ngaymua.Value + @"','" + txt_chuthich.Text + @"')";
+
+            SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 com.ExecuteNonQuery();
                 MessageBox.Show(" Thêm Thành công");

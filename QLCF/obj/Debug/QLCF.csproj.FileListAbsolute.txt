@@ -94,3 +94,18 @@ C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.N
 C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Properties.Resources.resources
 C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.SanPham.resources
 C:\Users\User\Desktop\New folder\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe.config
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.exe
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.pdb
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.exe
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\bin\Debug\QLCF.pdb
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.CTHD.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DangNhap.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.DSQUANLY.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Hoadon.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Khachhang.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.NhanVien.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.Properties.Resources.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.SanPham.resources
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.GenerateResource.Cache

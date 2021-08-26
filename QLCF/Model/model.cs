@@ -1,6 +1,4 @@
 ﻿using System;
-
-//mỗi model đều tạo một file hoặc tạo chung đang suy nghĩ 
 namespace Model
 {
     public class Authentication
