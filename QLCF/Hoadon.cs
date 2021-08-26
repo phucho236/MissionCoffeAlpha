@@ -22,6 +22,7 @@ namespace QLCF
 
         public void ketnoi()
         {
+            //em đổi connection ở 2 chổ chưa ?
             cnn.Open();
             string sql = "Select * from HOADON";
             SqlCommand com = new SqlCommand(sql, cnn);
@@ -119,8 +120,8 @@ namespace QLCF
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 var dangNhap = new DangNhap();
                 Model.UserModel userModel = dangNhap.getUserModel();
                 cnn.Open();
@@ -137,12 +138,12 @@ namespace QLCF
                 txt_chuthich.Clear();
                 txt_makh.Focus();
                 ketnoi();
-            //}
-            //catch
+            }
+            catch
 
-            //{
-            //    MessageBox.Show(" lỖI");
-            //}
+            {
+                MessageBox.Show(" lỖI");
+            }
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)

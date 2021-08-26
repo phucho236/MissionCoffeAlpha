@@ -36,7 +36,7 @@ namespace QLCF
             Khachhang KH = new Khachhang();
             KH.Show();
             
-        }
+        } 
 
         private void btn_hoadon_Click(object sender, EventArgs e)
         {

@@ -36,20 +36,20 @@
             this.THANHTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_m = new System.Windows.Forms.Label();
+            this.a = new System.Windows.Forms.Label();
             this.txt_s = new System.Windows.Forms.Label();
             this.txt_x = new System.Windows.Forms.Label();
             this.txt_t = new System.Windows.Forms.Label();
             this.txt_gia = new System.Windows.Forms.TextBox();
+            this.txt_thanhtien = new System.Windows.Forms.TextBox();
             this.txt_soluong = new System.Windows.Forms.TextBox();
-            this.txt_sanpham = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_chitiethd = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.txt_mahd = new System.Windows.Forms.TextBox();
             this.btn_sua = new System.Windows.Forms.Button();
-            this.a = new System.Windows.Forms.Label();
-            this.txt_thanhtien = new System.Windows.Forms.TextBox();
+            this.cbb_sanpham = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.data_cthd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +106,7 @@
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.cbb_sanpham);
             this.groupBox1.Controls.Add(this.txt_m);
             this.groupBox1.Controls.Add(this.a);
             this.groupBox1.Controls.Add(this.txt_s);
@@ -114,7 +115,6 @@
             this.groupBox1.Controls.Add(this.txt_gia);
             this.groupBox1.Controls.Add(this.txt_thanhtien);
             this.groupBox1.Controls.Add(this.txt_soluong);
-            this.groupBox1.Controls.Add(this.txt_sanpham);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_chitiethd);
             this.groupBox1.Controls.Add(this.btn_them);
@@ -136,6 +136,15 @@
             this.txt_m.Name = "txt_m";
             this.txt_m.Size = new System.Drawing.Size(0, 16);
             this.txt_m.TabIndex = 18;
+            // 
+            // a
+            // 
+            this.a.AutoSize = true;
+            this.a.Location = new System.Drawing.Point(554, 57);
+            this.a.Name = "a";
+            this.a.Size = new System.Drawing.Size(71, 16);
+            this.a.TabIndex = 17;
+            this.a.Text = "Thành Tiền";
             // 
             // txt_s
             // 
@@ -171,19 +180,19 @@
             this.txt_gia.Size = new System.Drawing.Size(143, 22);
             this.txt_gia.TabIndex = 11;
             // 
+            // txt_thanhtien
+            // 
+            this.txt_thanhtien.Location = new System.Drawing.Point(631, 54);
+            this.txt_thanhtien.Name = "txt_thanhtien";
+            this.txt_thanhtien.Size = new System.Drawing.Size(134, 22);
+            this.txt_thanhtien.TabIndex = 10;
+            // 
             // txt_soluong
             // 
             this.txt_soluong.Location = new System.Drawing.Point(378, 32);
             this.txt_soluong.Name = "txt_soluong";
             this.txt_soluong.Size = new System.Drawing.Size(147, 22);
             this.txt_soluong.TabIndex = 9;
-            // 
-            // txt_sanpham
-            // 
-            this.txt_sanpham.Location = new System.Drawing.Point(128, 80);
-            this.txt_sanpham.Name = "txt_sanpham";
-            this.txt_sanpham.Size = new System.Drawing.Size(147, 22);
-            this.txt_sanpham.TabIndex = 8;
             // 
             // label1
             // 
@@ -241,21 +250,14 @@
             this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
-            // a
+            // cbb_sanpham
             // 
-            this.a.AutoSize = true;
-            this.a.Location = new System.Drawing.Point(531, 35);
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(71, 16);
-            this.a.TabIndex = 17;
-            this.a.Text = "Thành Tiền";
-            // 
-            // txt_thanhtien
-            // 
-            this.txt_thanhtien.Location = new System.Drawing.Point(608, 32);
-            this.txt_thanhtien.Name = "txt_thanhtien";
-            this.txt_thanhtien.Size = new System.Drawing.Size(159, 22);
-            this.txt_thanhtien.TabIndex = 10;
+            this.cbb_sanpham.FormattingEnabled = true;
+            this.cbb_sanpham.Location = new System.Drawing.Point(128, 83);
+            this.cbb_sanpham.Name = "cbb_sanpham";
+            this.cbb_sanpham.Size = new System.Drawing.Size(147, 24);
+            this.cbb_sanpham.TabIndex = 19;
+            this.cbb_sanpham.SelectedValueChanged += new System.EventHandler(this.cbb_sanpham_SelectedValueChanged);
             // 
             // CTHD
             // 
@@ -284,7 +286,6 @@
         private System.Windows.Forms.Label txt_t;
         private System.Windows.Forms.TextBox txt_gia;
         private System.Windows.Forms.TextBox txt_soluong;
-        private System.Windows.Forms.TextBox txt_sanpham;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_chitiethd;
         private System.Windows.Forms.Button btn_them;
@@ -298,5 +299,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN;
         private System.Windows.Forms.Label a;
         private System.Windows.Forms.TextBox txt_thanhtien;
+        private System.Windows.Forms.ComboBox cbb_sanpham;
     }
 }
