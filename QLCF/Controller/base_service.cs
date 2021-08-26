@@ -7,6 +7,7 @@ namespace BASE_SERVICE
     interface BaseService
     {
         int logInV1(string userName, string passWord);
+        DataTable logInV2(string userName, string passWord);
         DataTable getDSNhanvien();
         int insertNhanvien(string tennv, string diachi, string sdt, DateTime dtngay, string taikhoan, string matkhau);
         int deleteNhanvien(int maNV);

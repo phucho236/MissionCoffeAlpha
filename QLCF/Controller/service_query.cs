@@ -10,9 +10,6 @@ namespace SERVICE_QUERY
 {
     public class ServiceQuery : BaseService
     {
-        //DESKTOP-VGBPJEV\SQLEXPRESS
-        //DESKTOP-6QVO0BO\SQLEXPRESS
-        // nhớ đổi mật khẩu mặc định thành sa2012
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-NLHV1L4\SQLEXPRESS;Initial Catalog=QUANLYCAPHE;Integrated Security=True;User ID=sa;Password=sa2012");
 
         BaseQuery baseQuery = new BaseQuery();
@@ -35,11 +32,21 @@ namespace SERVICE_QUERY
         public int logInV1(string userName, string passWord)
         {
             openConn();
-            Console.Write(baseQuery.logInQuery(userName, passWord));
-            SqlCommand com = new SqlCommand(baseQuery.logInQuery(userName, passWord), conn);
+            SqlCommand com = new SqlCommand(baseQuery.logInQueryV1(userName, passWord), conn);
             var result =  com.ExecuteScalar();
             closeConn();
             return Convert.ToInt32(result);
+        }
+        public DataTable logInV2(string userName, string passWord)
+        {
+            openConn();
+            SqlCommand com = new SqlCommand(baseQuery.logInQueryV2(userName, passWord), conn);
+            com.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            closeConn();
+            return dt;
         }
         public DataTable getDSNhanvien()
         {

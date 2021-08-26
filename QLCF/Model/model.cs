@@ -1,24 +1,22 @@
 ﻿using System;
 namespace Model
 {
-    public class Authentication
+    public class tbl_sanpham
     {
-        public int authenticationID { get; set; }
-        public string userName { get; set; }
-        public string passWord { get; set; }
-        public int userId { get; set; }
-        public int InfoFeildID { get; set; }
+        public string MAHD { get; set; }
+        public string MANV { get; set; }
+        public string MAKH { get; set; }
+        public double TONGTIEN { get; set; }
+        public DateTime? NGAYMUA { get; set; }
+        public string CHUTHICH { get; set; }
     }
-
     public class UserModel
     {
-        public int userID { get; set; }
-        public string fullName { get; set; }
-        public string address { get; set; }
-        public string phoneNumber { get; set; }
-        public DateTime birthDay { get; set; }
-        public string emailUser { get; set; }
-        public int InfoFeildID { get; set; }
+        public int MANV { get; set; }
+        public string TENNV { get; set; }
+        public string DIACHI { get; set; }
+        public string SDT { get; set; }
+        public DateTime NGAYSINH { get; set; }
     }
 }
 

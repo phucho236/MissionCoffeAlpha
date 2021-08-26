@@ -36,6 +36,7 @@
             this.NGAYMUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHUTHICH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tongTien_txt = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
@@ -48,13 +49,10 @@
             this.txt_chuthich = new System.Windows.Forms.TextBox();
             this.txt_makh = new System.Windows.Forms.TextBox();
             this.txt_manv = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_chitiethd = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
-            this.txt_mahd = new System.Windows.Forms.TextBox();
             this.btn_sua = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_hoadon)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -132,11 +130,9 @@
             this.groupBox1.Controls.Add(this.txt_chuthich);
             this.groupBox1.Controls.Add(this.txt_makh);
             this.groupBox1.Controls.Add(this.txt_manv);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_chitiethd);
             this.groupBox1.Controls.Add(this.btn_them);
             this.groupBox1.Controls.Add(this.btn_xoa);
-            this.groupBox1.Controls.Add(this.txt_mahd);
             this.groupBox1.Controls.Add(this.btn_sua);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 10);
@@ -146,10 +142,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Thông Tin";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(666, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Xuất hóa đơn";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // tongTien_txt
             // 
             this.tongTien_txt.AutoSize = true;
-            this.tongTien_txt.Location = new System.Drawing.Point(393, 95);
+            this.tongTien_txt.Location = new System.Drawing.Point(108, 91);
             this.tongTien_txt.Name = "tongTien_txt";
             this.tongTien_txt.Size = new System.Drawing.Size(0, 16);
             this.tongTien_txt.TabIndex = 20;
@@ -191,7 +196,7 @@
             // txt_s
             // 
             this.txt_s.AutoSize = true;
-            this.txt_s.Location = new System.Drawing.Point(31, 96);
+            this.txt_s.Location = new System.Drawing.Point(31, 57);
             this.txt_s.Name = "txt_s";
             this.txt_s.Size = new System.Drawing.Size(101, 16);
             this.txt_s.TabIndex = 16;
@@ -200,7 +205,7 @@
             // txt_x
             // 
             this.txt_x.AutoSize = true;
-            this.txt_x.Location = new System.Drawing.Point(316, 96);
+            this.txt_x.Location = new System.Drawing.Point(31, 92);
             this.txt_x.Name = "txt_x";
             this.txt_x.Size = new System.Drawing.Size(64, 16);
             this.txt_x.TabIndex = 15;
@@ -218,7 +223,7 @@
             // txt_t
             // 
             this.txt_t.AutoSize = true;
-            this.txt_t.Location = new System.Drawing.Point(31, 60);
+            this.txt_t.Location = new System.Drawing.Point(31, 24);
             this.txt_t.Name = "txt_t";
             this.txt_t.Size = new System.Drawing.Size(90, 16);
             this.txt_t.TabIndex = 13;
@@ -233,30 +238,21 @@
             // 
             // txt_makh
             // 
-            this.txt_makh.Location = new System.Drawing.Point(150, 93);
+            this.txt_makh.Location = new System.Drawing.Point(150, 54);
             this.txt_makh.Name = "txt_makh";
             this.txt_makh.Size = new System.Drawing.Size(147, 22);
             this.txt_makh.TabIndex = 9;
             // 
             // txt_manv
             // 
-            this.txt_manv.Location = new System.Drawing.Point(150, 57);
+            this.txt_manv.Location = new System.Drawing.Point(150, 21);
             this.txt_manv.Name = "txt_manv";
             this.txt_manv.Size = new System.Drawing.Size(147, 22);
             this.txt_manv.TabIndex = 8;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Mã Hoá Đơn";
-            // 
             // btn_chitiethd
             // 
-            this.btn_chitiethd.Location = new System.Drawing.Point(702, 159);
+            this.btn_chitiethd.Location = new System.Drawing.Point(666, 21);
             this.btn_chitiethd.Name = "btn_chitiethd";
             this.btn_chitiethd.Size = new System.Drawing.Size(186, 23);
             this.btn_chitiethd.TabIndex = 5;
@@ -266,7 +262,7 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(734, 37);
+            this.btn_them.Location = new System.Drawing.Point(150, 91);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(85, 25);
             this.btn_them.TabIndex = 0;
@@ -276,7 +272,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(841, 37);
+            this.btn_xoa.Location = new System.Drawing.Point(257, 91);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(90, 25);
             this.btn_xoa.TabIndex = 3;
@@ -284,31 +280,15 @@
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
-            // txt_mahd
-            // 
-            this.txt_mahd.Location = new System.Drawing.Point(150, 21);
-            this.txt_mahd.Name = "txt_mahd";
-            this.txt_mahd.Size = new System.Drawing.Size(147, 22);
-            this.txt_mahd.TabIndex = 2;
-            // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(946, 37);
+            this.btn_sua.Location = new System.Drawing.Point(362, 91);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(92, 25);
             this.btn_sua.TabIndex = 4;
             this.btn_sua.Text = "Sửa";
             this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(894, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Xuất hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // Hoadon
             // 
@@ -340,11 +320,9 @@
         private System.Windows.Forms.TextBox txt_chuthich;
         private System.Windows.Forms.TextBox txt_makh;
         private System.Windows.Forms.TextBox txt_manv;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_chitiethd;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_xoa;
-        private System.Windows.Forms.TextBox txt_mahd;
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.DateTimePicker dt_ngaymua;
         private System.Windows.Forms.Label txt_ngay;

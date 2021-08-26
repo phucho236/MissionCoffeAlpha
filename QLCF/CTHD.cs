@@ -18,11 +18,12 @@ namespace QLCF
         }
 
         SqlConnection cnn = new SqlConnection(connection.getconnect());
+        Hoadon hd = new Hoadon();
         public void ketnoi()
         {
-            Hoadon hd = new Hoadon();
-            string idhd = hd.getmahd();
-            txt_mahd.Text = idhd;
+           
+            int idhd = hd.getmahd();
+            txt_mahd.Text = idhd.ToString();
             cnn.Open();
             string sql = "Select * from CTHOADON where MAHD = '"+idhd+"'";
             SqlCommand com = new SqlCommand(sql, cnn);
@@ -41,17 +42,17 @@ namespace QLCF
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            Hoadon hd = new Hoadon();
-            string idhd = hd.getmahd();
+           
+            int idhd = hd.getmahd();
             cnn.Open();
-            string sql = @"Insert Into CTHOADON VALUES ('" + idhd + @"',N'" + txt_sanpham.Text + @"','" + txt_soluong.Text + @"','" + txt_gia.Text + @"','" + txt_thanhtien.Text + @"')";
+            string sql = @"Insert Into CTHOADON VALUES ('" + idhd + @"',N'" + txt_sanpham.Text + @"','" + txt_soluong.Text + @"','" + txt_gia.Text + @"','" + DBNull.Value + @"')";
             SqlCommand com = new SqlCommand(sql, cnn);
             com.CommandType = CommandType.Text;
             com.ExecuteNonQuery();
             MessageBox.Show(" Thêm Thành công");
             cnn.Close();
-         
-     
+
+            hd.ketnoi();//get new data in before page
 
             txt_mahd.Clear();
             txt_sanpham.Clear();//ok
@@ -78,6 +79,7 @@ namespace QLCF
                 cnn.Close();
 
                 ketnoi();
+                hd.ketnoi();//get new data in before page
             }
             catch
             {
@@ -102,6 +104,7 @@ namespace QLCF
                 cnn.Close();
 
                 ketnoi();
+                hd.ketnoi();//get new data in before page
             }
             catch
             {

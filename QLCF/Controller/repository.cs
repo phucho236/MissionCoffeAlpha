@@ -17,6 +17,10 @@ namespace REPOSITORY
         {
             return servicerQuery.logInV1(userName, passWord);
         }
+        public DataTable logInV2(string userName, string passWord)
+        {
+            return servicerQuery.logInV2(userName, passWord);
+        }
         public DataTable getDSNhanvien()
         {
             return servicerQuery.getDSNhanvien();

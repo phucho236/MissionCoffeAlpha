@@ -19,27 +19,38 @@ namespace QLCF
         {
             InitializeComponent();
         }
-
-      
-        
+        public static Model.UserModel userModel = new Model.UserModel();
+        public Model.UserModel getUserModel()
+        {
+            return userModel;
+        }
         private void btn_dangnhap_Click(object sender, EventArgs e)
         {
+            var data = repository.logInV2(txt_tk.Text, txt_mk.Text);
 
-      
-                if (Convert.ToInt32(repository.logInV1(txt_tk.Text,txt_mk.Text)) ==1)
-                   {
 
-                       DSQUANLY DS = new DSQUANLY();
-                       DS.Show();
-                       this.Hide();
+            if (data.Rows.Count > 0)
+            {
+                foreach (DataRow row in data.Rows)
+                {
 
-                   }
-                else
-                   {
-                        MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu");
-           
-                   }
+                    userModel.MANV = int.Parse(row["MANV"].ToString());
+                    userModel.TENNV = row["TENNV"].ToString();
+                    userModel.DIACHI = row["DIACHI"].ToString();
+                    userModel.SDT =  row["SDT"].ToString();
+                    userModel.NGAYSINH = DateTime.Parse(row["NGAYSINH"].ToString());
+                }
+              
+                var DS = new DSQUANLY();
+                DS.Show();
+                this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu");
+
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {

@@ -18,6 +18,8 @@ namespace QLCF
             InitializeComponent();
         }
         SqlConnection cnn = new SqlConnection(connection.getconnect());
+        public static int idhd = 0;
+
         public void ketnoi()
         {
             cnn.Open();
@@ -30,14 +32,20 @@ namespace QLCF
             cnn.Close();
             data_hoadon.DataSource = dt;
         }
-        public static string idhd = "";
-        public string getmahd()
+        
+
+        public int getmahd()
         {
             return idhd;
         }
+
         private void btn_chitiethd_Click(object sender, EventArgs e)
         {
-            idhd = txt_mahd.Text.ToString();
+           if(idhd == 0)
+            {
+                MessageBox.Show("Vui lòng chọn hóa đơn");
+                return;
+            }
             CTHD ct = new CTHD();
             ct.Show();
         }
@@ -47,20 +55,12 @@ namespace QLCF
             ketnoi();
         }
 
-        public class tbl_sanpham
-        {
-            public string MAHD { get; set; }
-            public string MANV { get; set; }
-            public string MAKH { get; set; }
-            public double TONGTIEN { get; set; }
-            public DateTime? NGAYMUA { get; set; }
-            public string CHUTHICH { get; set; }
-        }
+    
         public void timkiem()
         {
             string queryString = "Select * from HOADON";
 
-            var l = new List<tbl_sanpham>();
+            var l = new List<Model.tbl_sanpham>();
             SqlCommand command = new SqlCommand(queryString, cnn);
             cnn.Open();
             SqlDataReader reader = command.ExecuteReader();
@@ -68,7 +68,7 @@ namespace QLCF
             {
                 while (reader.Read())
                 {
-                    var r = new tbl_sanpham();
+                    var r = new Model.tbl_sanpham();
                     r.MAHD = reader["MAHD"] is DBNull ? "" : reader["MAHD"].ToString();
                     r.MANV = reader["MANV"] is DBNull ? "" : reader["MANV"].ToString();
                     r.MAKH = reader["MAKH"] is DBNull ? "" : reader["MAKH"].ToString();
@@ -121,10 +121,12 @@ namespace QLCF
         {
             //try
             //{
+                var dangNhap = new DangNhap();
+                Model.UserModel userModel = dangNhap.getUserModel();
                 cnn.Open();
-            string sql = @"Insert Into HOADON VALUES ('" + txt_mahd.Text + @"',N'" + txt_manv.Text + @"','" + txt_makh.Text + @"','" + tongTien_txt.Text + @"','" + dt_ngaymua.Value + @"','" + txt_chuthich.Text + @"')";
+                string sql = @"Insert Into HOADON VALUES (N'" + userModel.MANV.ToString() + @"','" + txt_makh.Text + @"','" + DBNull.Value + @"','" + dt_ngaymua.Value + @"',N'" + txt_chuthich.Text + @"')";
 
-            SqlCommand com = new SqlCommand(sql, cnn);
+                SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 com.ExecuteNonQuery();
                 MessageBox.Show(" Thêm Thành công");
@@ -135,15 +137,12 @@ namespace QLCF
                 txt_chuthich.Clear();
                 txt_makh.Focus();
                 ketnoi();
-           // }
+            //}
             //catch
 
             //{
             //    MessageBox.Show(" lỖI");
             //}
-      
-
-         
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
@@ -152,7 +151,7 @@ namespace QLCF
             {
 
                 cnn.Open();
-                string sql = @"Delete FROM HOADON  Where (MAHD = '" + txt_mahd.Text + "')";
+                string sql = @"Delete FROM HOADON  Where (MAHD = '" + idhd + "')";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 com.ExecuteNonQuery();
@@ -172,10 +171,8 @@ namespace QLCF
         {
             try
             {
-
-
                 cnn.Open();
-                string sql = @"update HOADON set MANV= '" + txt_manv.Text.ToString() + "' ,MAKH= '" + txt_makh.Text.ToString() + "' ,NGAYMUA='" + dt_ngaymua.Value + "',CHUTHICH= N'" + txt_chuthich.Text.ToString() + "' where  MAHD = '" + txt_mahd.Text.ToString() + "'";
+                string sql = @"update HOADON set MANV= '" + txt_manv.Text.ToString() + "' ,MAKH= '" + txt_makh.Text.ToString() + "' ,NGAYMUA='" + dt_ngaymua.Value + "',CHUTHICH= N'" + txt_chuthich.Text.ToString() + "' where  MAHD = '" + idhd + "'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 com.ExecuteNonQuery();
@@ -195,7 +192,7 @@ namespace QLCF
         {
             int numrow;
             numrow = e.RowIndex;
-            txt_mahd.Text = data_hoadon.Rows[numrow].Cells[0].Value.ToString();
+            idhd = int.Parse(data_hoadon.Rows[numrow].Cells[0].Value.ToString());
             txt_manv.Text = data_hoadon.Rows[numrow].Cells[1].Value.ToString();
             txt_makh.Text = data_hoadon.Rows[numrow].Cells[2].Value.ToString();
             tongTien_txt.Text = data_hoadon.Rows[numrow].Cells[3].Value.ToString();
@@ -207,9 +204,5 @@ namespace QLCF
         {
             timkiem();
         }
-
-        
-
-
     }
 }
