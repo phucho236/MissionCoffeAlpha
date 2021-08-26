@@ -13,7 +13,7 @@ namespace SERVICE_QUERY
         //DESKTOP-VGBPJEV\SQLEXPRESS
         //DESKTOP-6QVO0BO\SQLEXPRESS
         // nhớ đổi mật khẩu mặc định thành sa2012
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-NLHV1L4\SQLEXPRESS;Initial Catalog=QUANLYCAPHE;Integrated Security=True;User ID=sa;Password=sa2012");
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-6QVO0BO\SQLEXPRESS;Initial Catalog=QUANLYCAPHE;Integrated Security=True;User ID=sa;Password=123");
 
         BaseQuery baseQuery = new BaseQuery();
         void openConn()

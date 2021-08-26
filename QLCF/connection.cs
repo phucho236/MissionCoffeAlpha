@@ -10,7 +10,7 @@ namespace QLCF
     {
         public static string getconnect()
         {
-            return @"Data Source=DESKTOP-NLHV1L4\SQLEXPRESS;Initial Catalog=QUANLYCAPHE;Integrated Security=True;User ID=sa;Password=sa2012";
+            return @"Data Source=DESKTOP-6QVO0BO\SQLEXPRESS;Initial Catalog=QUANLYCAPHE;Integrated Security=True;User ID=sa;Password=123";
         }
     }
 }
