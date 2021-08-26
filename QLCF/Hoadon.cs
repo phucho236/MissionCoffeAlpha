@@ -46,7 +46,7 @@ namespace QLCF
                 MessageBox.Show("Vui lòng chọn hóa đơn");
                 return;
             }
-            CTHD ct = new CTHD();
+            CTHD ct = new CTHD(this);
             ct.Show();
         }
   

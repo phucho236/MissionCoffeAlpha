@@ -12,13 +12,14 @@ namespace QLCF
 {
     public partial class CTHD : Form
     {
-        public CTHD()
+        public CTHD(Hoadon hoadon)
         {
             InitializeComponent();
+            hd = hoadon;
         }
 
         SqlConnection cnn = new SqlConnection(connection.getconnect());
-        Hoadon hd = new Hoadon();
+       private  Hoadon hd;
         public void ketnoi()
         {
            
