@@ -27,8 +27,8 @@ namespace QLCF
             SqlDataAdapter da = new SqlDataAdapter(com);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            cnn.Close();
             data_sanpham.DataSource = dt;
+            cnn.Close();
         }
 
 

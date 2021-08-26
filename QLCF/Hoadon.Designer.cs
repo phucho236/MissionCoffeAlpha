@@ -45,10 +45,8 @@
             this.txt_s = new System.Windows.Forms.Label();
             this.txt_x = new System.Windows.Forms.Label();
             this.txt_ngay = new System.Windows.Forms.Label();
-            this.txt_t = new System.Windows.Forms.Label();
             this.txt_chuthich = new System.Windows.Forms.TextBox();
             this.txt_makh = new System.Windows.Forms.TextBox();
-            this.txt_manv = new System.Windows.Forms.TextBox();
             this.btn_chitiethd = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -126,10 +124,8 @@
             this.groupBox1.Controls.Add(this.txt_s);
             this.groupBox1.Controls.Add(this.txt_x);
             this.groupBox1.Controls.Add(this.txt_ngay);
-            this.groupBox1.Controls.Add(this.txt_t);
             this.groupBox1.Controls.Add(this.txt_chuthich);
             this.groupBox1.Controls.Add(this.txt_makh);
-            this.groupBox1.Controls.Add(this.txt_manv);
             this.groupBox1.Controls.Add(this.btn_chitiethd);
             this.groupBox1.Controls.Add(this.btn_them);
             this.groupBox1.Controls.Add(this.btn_xoa);
@@ -144,7 +140,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(666, 63);
+            this.button1.Location = new System.Drawing.Point(647, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 23);
             this.button1.TabIndex = 21;
@@ -154,14 +150,14 @@
             // tongTien_txt
             // 
             this.tongTien_txt.AutoSize = true;
-            this.tongTien_txt.Location = new System.Drawing.Point(108, 91);
+            this.tongTien_txt.Location = new System.Drawing.Point(83, 63);
             this.tongTien_txt.Name = "tongTien_txt";
             this.tongTien_txt.Size = new System.Drawing.Size(0, 16);
             this.tongTien_txt.TabIndex = 20;
             // 
             // btn_Search
             // 
-            this.btn_Search.Location = new System.Drawing.Point(6, 159);
+            this.btn_Search.Location = new System.Drawing.Point(6, 92);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(75, 23);
             this.btn_Search.TabIndex = 8;
@@ -171,7 +167,7 @@
             // 
             // txt_timkiem
             // 
-            this.txt_timkiem.Location = new System.Drawing.Point(87, 160);
+            this.txt_timkiem.Location = new System.Drawing.Point(87, 93);
             this.txt_timkiem.Name = "txt_timkiem";
             this.txt_timkiem.Size = new System.Drawing.Size(251, 22);
             this.txt_timkiem.TabIndex = 9;
@@ -196,7 +192,7 @@
             // txt_s
             // 
             this.txt_s.AutoSize = true;
-            this.txt_s.Location = new System.Drawing.Point(31, 57);
+            this.txt_s.Location = new System.Drawing.Point(6, 28);
             this.txt_s.Name = "txt_s";
             this.txt_s.Size = new System.Drawing.Size(101, 16);
             this.txt_s.TabIndex = 16;
@@ -205,7 +201,7 @@
             // txt_x
             // 
             this.txt_x.AutoSize = true;
-            this.txt_x.Location = new System.Drawing.Point(31, 92);
+            this.txt_x.Location = new System.Drawing.Point(6, 63);
             this.txt_x.Name = "txt_x";
             this.txt_x.Size = new System.Drawing.Size(64, 16);
             this.txt_x.TabIndex = 15;
@@ -220,15 +216,6 @@
             this.txt_ngay.TabIndex = 14;
             this.txt_ngay.Text = "Ngày mua";
             // 
-            // txt_t
-            // 
-            this.txt_t.AutoSize = true;
-            this.txt_t.Location = new System.Drawing.Point(31, 24);
-            this.txt_t.Name = "txt_t";
-            this.txt_t.Size = new System.Drawing.Size(90, 16);
-            this.txt_t.TabIndex = 13;
-            this.txt_t.Text = "Mã Nhân Viên";
-            // 
             // txt_chuthich
             // 
             this.txt_chuthich.Location = new System.Drawing.Point(390, 57);
@@ -238,21 +225,14 @@
             // 
             // txt_makh
             // 
-            this.txt_makh.Location = new System.Drawing.Point(150, 54);
+            this.txt_makh.Location = new System.Drawing.Point(113, 25);
             this.txt_makh.Name = "txt_makh";
             this.txt_makh.Size = new System.Drawing.Size(147, 22);
             this.txt_makh.TabIndex = 9;
             // 
-            // txt_manv
-            // 
-            this.txt_manv.Location = new System.Drawing.Point(150, 21);
-            this.txt_manv.Name = "txt_manv";
-            this.txt_manv.Size = new System.Drawing.Size(147, 22);
-            this.txt_manv.TabIndex = 8;
-            // 
             // btn_chitiethd
             // 
-            this.btn_chitiethd.Location = new System.Drawing.Point(666, 21);
+            this.btn_chitiethd.Location = new System.Drawing.Point(647, 21);
             this.btn_chitiethd.Name = "btn_chitiethd";
             this.btn_chitiethd.Size = new System.Drawing.Size(186, 23);
             this.btn_chitiethd.TabIndex = 5;
@@ -262,7 +242,7 @@
             // 
             // btn_them
             // 
-            this.btn_them.Location = new System.Drawing.Point(150, 91);
+            this.btn_them.Location = new System.Drawing.Point(386, 92);
             this.btn_them.Name = "btn_them";
             this.btn_them.Size = new System.Drawing.Size(85, 25);
             this.btn_them.TabIndex = 0;
@@ -272,7 +252,7 @@
             // 
             // btn_xoa
             // 
-            this.btn_xoa.Location = new System.Drawing.Point(257, 91);
+            this.btn_xoa.Location = new System.Drawing.Point(520, 92);
             this.btn_xoa.Name = "btn_xoa";
             this.btn_xoa.Size = new System.Drawing.Size(90, 25);
             this.btn_xoa.TabIndex = 3;
@@ -282,7 +262,7 @@
             // 
             // btn_sua
             // 
-            this.btn_sua.Location = new System.Drawing.Point(362, 91);
+            this.btn_sua.Location = new System.Drawing.Point(647, 92);
             this.btn_sua.Name = "btn_sua";
             this.btn_sua.Size = new System.Drawing.Size(92, 25);
             this.btn_sua.TabIndex = 4;
@@ -316,10 +296,8 @@
         private System.Windows.Forms.Label txt_chuthi;
         private System.Windows.Forms.Label txt_s;
         private System.Windows.Forms.Label txt_x;
-        private System.Windows.Forms.Label txt_t;
         private System.Windows.Forms.TextBox txt_chuthich;
         private System.Windows.Forms.TextBox txt_makh;
-        private System.Windows.Forms.TextBox txt_manv;
         private System.Windows.Forms.Button btn_chitiethd;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_xoa;
