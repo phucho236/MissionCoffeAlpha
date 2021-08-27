@@ -5,8 +5,6 @@ namespace BASE_QUERY
 {
     public  class BaseQuery
     {
-      
-       
         public string logInQueryV1(string userName,string pass){
          return "SELECT dbo.LoginV1('" + userName + @"','" + pass + @"')";}
 
@@ -22,7 +20,7 @@ namespace BASE_QUERY
         public string deleteNhanVienQuery(int maNV){
          return  @"Delete FROM NHANVIEN  Where (MANV = '" + maNV + "')";}
 
-        public string updateNhanVienQuery(int manv, string tennv, string diachi, string sdt, DateTime dtngay, string taikhoan, string matkhau) { return "update NHANVIEN SET TENNV = N'" + tennv + "' ,DIACHI= '" + diachi + "',SDT='" + sdt + "',NGAYSINH='" + dtngay + "',TENTK='" + taikhoan + "',PASSWD='" + matkhau + "' where MANV = '" + manv + "'"; } 
+        public string updateNhanVienQuery(int manv, string tennv, string diachi, string sdt, DateTime dtngay, string taikhoan, string matkhau) { return "update NHANVIEN SET TENNV = N'" + tennv + "' ,DIACHI= N'" + diachi + "',SDT='" + sdt + "',NGAYSINH='" + dtngay + "',TENTK='" + taikhoan + "',PASSWD='" + matkhau + "' where MANV = '" + manv + "'"; } 
     }
 }
 

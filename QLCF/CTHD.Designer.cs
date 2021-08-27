@@ -143,6 +143,7 @@
             this.cbb_sanpham.Size = new System.Drawing.Size(147, 24);
             this.cbb_sanpham.TabIndex = 19;
             this.cbb_sanpham.SelectedValueChanged += new System.EventHandler(this.cbb_sanpham_SelectedValueChanged);
+            this.cbb_sanpham.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbb_sanpham_KeyDown);
             // 
             // txt_m
             // 

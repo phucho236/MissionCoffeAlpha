@@ -13,3 +13,4 @@ C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.Gener
 C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.exe
 C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.pdb
 C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\MissionCoffeAlpha-develop\QLCF\obj\Debug\QLCF.csproj.ResolveComReference.cache

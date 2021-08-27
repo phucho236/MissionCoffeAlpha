@@ -59,8 +59,8 @@ namespace SERVICE_QUERY
             closeConn();
             return  dt;
         }
-        public int insertNhanvien( string tennv, string diachi,string sdt, DateTime dtngay,string taikhoan, string matkhau)
-            {
+        public int insertNhanvien(string tennv, string diachi, string sdt, DateTime dtngay, string taikhoan, string matkhau)
+        {
             try
             {
                 openConn();
@@ -69,13 +69,13 @@ namespace SERVICE_QUERY
                 com.ExecuteNonQuery();
                 closeConn();
                 return 1;
-        }
+            }
             catch
             {
                 return 0;
             }
         }
-      
+
 
         public int deleteNhanvien(int maNV)
         {

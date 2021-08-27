@@ -51,6 +51,27 @@ namespace QLCF
 
         private void btn_them_Click(object sender, EventArgs e)
         {
+            if (txt_tennv.Text == null || txt_tennv.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên nhân viên");
+                return;
+            }
+         
+            if (txt_sdt.Text == null || txt_sdt.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại");
+                return;
+            }
+            if (txt_taikhoan.Text== null || txt_taikhoan.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập tài khoản");
+                return;
+            }
+            if (txt_matkhau.Text == null || txt_matkhau.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu");
+                return;
+            }
             int response = repository.insertNhanvien( txt_tennv.Text, txt_diachi.Text, txt_sdt.Text, dt_ngay.Value, txt_taikhoan.Text, txt_matkhau.Text);
             if (response == 1)
             {
@@ -98,7 +119,27 @@ namespace QLCF
                 MessageBox.Show("Vui lòng chọn nhân viên!!!");
                 return;
             }
+            if (txt_tennv.Text == null || txt_tennv.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên nhân viên");
+                return;
+            }
 
+            if (txt_sdt.Text == null || txt_sdt.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại");
+                return;
+            }
+            if (txt_taikhoan.Text == null || txt_taikhoan.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập tài khoản");
+                return;
+            }
+            if (txt_matkhau.Text == null || txt_matkhau.Text.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu");
+                return;
+            }
             int response = repository.updateNhanVien(idNhanvien, txt_tennv.Text, txt_diachi.Text, txt_sdt.Text, dt_ngay.Value, txt_taikhoan.Text, txt_matkhau.Text);
             if (response == 1)
             {

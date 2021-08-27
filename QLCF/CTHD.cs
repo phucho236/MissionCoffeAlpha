@@ -44,14 +44,14 @@ namespace QLCF
                 ///////
                 string queryString = "Select * from CTHOADON where MAHD ='" + idhd + "'";
 
-                var l = new List<CTHOADON>();
+                var l = new List<Model.CTHOADON>();
                 SqlCommand command = new SqlCommand(queryString, cnn);
                 SqlDataReader reader = command.ExecuteReader();
                 try
                 {
                     while (reader.Read())
                     {
-                        var r = new CTHOADON();
+                        var r = new Model.CTHOADON();
                         r.MAHD = reader["MAHD"] is DBNull ? "" : reader["MAHD"].ToString();
                         r.MASP = reader["MASP"] is DBNull ? "" : reader["MASP"].ToString();
                         r.SOLUONG = reader["SOLUONG"] is DBNull ? 0 : int.Parse(reader["SOLUONG"].ToString());
@@ -74,7 +74,7 @@ namespace QLCF
             }
 
         }
-        List<SANPHAM> l = new List<SANPHAM>();
+        List<Model.SANPHAM> l = new List<Model.SANPHAM>();
         public void loadcbb()
         {
 
@@ -89,7 +89,7 @@ namespace QLCF
             {
                 while (reader.Read())
                 {
-                    var r = new SANPHAM();
+                    var r = new Model.SANPHAM();
                     r.TENSP = reader["TENSP"] is DBNull ? "" : reader["TENSP"].ToString();
                     r.MASP = reader["MASP"] is DBNull ? "" : reader["MASP"].ToString();
                     r.CHITIET = reader["CHITIET"] is DBNull ? "" : reader["CHITIET"].ToString();
@@ -101,26 +101,11 @@ namespace QLCF
             {
                 reader.Close();
             }
-            cbb_sanpham.DataSource = l;
+             cbb_sanpham.DataSource = l;
             cbb_sanpham.DisplayMember = "TENSP";
             cbb_sanpham.ValueMember = "MASP";
+            cbb_sanpham.SelectedIndex = -1;
             close();
-        }
-        public class SANPHAM
-        {
-            public string MASP { get; set; }
-            public string TENSP { get; set; }
-            public string CHITIET { get; set; }
-            public int? GIA { get; set; }
-        }
-        public class CTHOADON
-        {
-            public string MAHD { get; set; }
-            public string MASP { get; set; }
-            public string TENSP { get; set; }
-            public int? SOLUONG { get; set; }
-            public int? GIA { get; set; }
-            public int? THANHTIEN { get; set; }
         }
         private void CTHD_Load(object sender, EventArgs e)
         {
@@ -132,9 +117,10 @@ namespace QLCF
         {
             try
             {
-                if (txt_soluong.Text == null || txt_soluong.Text == "" || int.Parse(txt_soluong.Text) <= 0)
+              
+                if (cbb_sanpham.SelectedItem == null)
                 {
-                    MessageBox.Show("Vui lòng nhập số lượng");
+                    MessageBox.Show("Vui lòng chọn sản phẩm");
                     return;
                 }
                 if (txt_gia.Text == null || txt_gia.Text == "" || int.Parse(txt_gia.Text) <= 0)
@@ -142,7 +128,11 @@ namespace QLCF
                     MessageBox.Show("Vui lòng nhập giá");
                     return;
                 }
-
+                if (txt_soluong.Text == null || txt_soluong.Text == "" || int.Parse(txt_soluong.Text) <= 0)
+                {
+                    MessageBox.Show("Vui lòng nhập số lượng");
+                    return;
+                }
                 foreach (DataGridViewRow row in data_cthd.Rows)
                 {
 
@@ -178,9 +168,29 @@ namespace QLCF
         {
             try
             {
+                if (cbb_sanpham.SelectedItem == null)
+                {
+                    MessageBox.Show("Vui lòng chọn sản phẩm");
+                    return;
+                }
+                bool validateSanPhamTonTai = false;
+                foreach (DataGridViewRow row in data_cthd.Rows)
+                {
 
+                    if (row.Cells[1].Value.ToString().Trim().Equals(cbb_sanpham.SelectedValue.ToString().Trim()))
+                    {
+                        validateSanPhamTonTai = true;
+                       
+                    }
+
+                }
+                if(validateSanPhamTonTai == false)
+                {
+                    MessageBox.Show("sản phẩm không tồn tại trong chi tiết hóa đơn !!!");
+                    return;
+                }
                 open();
-                string sql = @"Delete FROM CTHOADON  Where MAHD = '" + txt_mahd.Text + "' AND  MASP = '" + cbb_sanpham.SelectedValue.ToString() + "'";
+                string sql = @"Delete FROM CTHOADON  Where MAHD = '" + hd.getmahd() + "' AND  MASP = '" + cbb_sanpham.SelectedValue.ToString() + "'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 com.ExecuteNonQuery();
@@ -189,27 +199,34 @@ namespace QLCF
                 cleanData();
                 ketnoi();
                 hd.ketnoi();
-            }
+        }
             catch
             {
                 MessageBox.Show("Xoá không thành công !!!");
 
             }
-        }
+}
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
             try
             {
+                
 
-                if (txt_soluong.Text == null || txt_soluong.Text == "" || int.Parse(txt_soluong.Text) <= 0)
+
+                if (cbb_sanpham.SelectedItem == null)
                 {
-                    MessageBox.Show("Vui lòng nhập số lượng");
+                    MessageBox.Show("Vui lòng chọn sản phẩm");
                     return;
                 }
                 if (txt_gia.Text == null || txt_gia.Text == "" || int.Parse(txt_gia.Text) <= 0)
                 {
                     MessageBox.Show("Vui lòng nhập giá");
+                    return;
+                }
+                if (txt_soluong.Text == null || txt_soluong.Text == "" || int.Parse(txt_soluong.Text) <= 0)
+                {
+                    MessageBox.Show("Vui lòng nhập số lượng");
                     return;
                 }
                 open();
@@ -275,12 +292,14 @@ namespace QLCF
         }
         void cleanData()
         {
-            txt_mahd.Clear();
             txt_soluong.Clear();
             txt_thanhtien.Text = "";
             txt_mahd.Focus();
+            cbb_sanpham.SelectedIndex = -1;
+            txt_gia.Clear();
+            
         }
-
+     
         private void txt_soluong_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -291,6 +310,11 @@ namespace QLCF
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
+        }
+
+        private void cbb_sanpham_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
         }
     }
 }

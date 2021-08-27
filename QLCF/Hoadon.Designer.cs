@@ -36,17 +36,17 @@
             this.NGAYMUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CHUTHICH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lb_khachhang = new System.Windows.Forms.Label();
+            this.cbb_khachhang = new System.Windows.Forms.ComboBox();
+            this.btn_xhd = new System.Windows.Forms.Button();
             this.tongTien_txt = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.dt_ngaymua = new System.Windows.Forms.DateTimePicker();
             this.txt_chuthi = new System.Windows.Forms.Label();
-            this.txt_s = new System.Windows.Forms.Label();
             this.txt_x = new System.Windows.Forms.Label();
             this.txt_ngay = new System.Windows.Forms.Label();
             this.txt_chuthich = new System.Windows.Forms.TextBox();
-            this.txt_makh = new System.Windows.Forms.TextBox();
             this.btn_chitiethd = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
@@ -65,9 +65,9 @@
             this.TONGTIEN,
             this.NGAYMUA,
             this.CHUTHICH});
-            this.data_hoadon.Location = new System.Drawing.Point(21, 204);
+            this.data_hoadon.Location = new System.Drawing.Point(21, 161);
             this.data_hoadon.Name = "data_hoadon";
-            this.data_hoadon.Size = new System.Drawing.Size(1086, 319);
+            this.data_hoadon.Size = new System.Drawing.Size(1086, 362);
             this.data_hoadon.TabIndex = 10;
             this.data_hoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_hoadon_CellClick);
             // 
@@ -115,17 +115,17 @@
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.lb_khachhang);
+            this.groupBox1.Controls.Add(this.cbb_khachhang);
+            this.groupBox1.Controls.Add(this.btn_xhd);
             this.groupBox1.Controls.Add(this.tongTien_txt);
             this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.txt_timkiem);
             this.groupBox1.Controls.Add(this.dt_ngaymua);
             this.groupBox1.Controls.Add(this.txt_chuthi);
-            this.groupBox1.Controls.Add(this.txt_s);
             this.groupBox1.Controls.Add(this.txt_x);
             this.groupBox1.Controls.Add(this.txt_ngay);
             this.groupBox1.Controls.Add(this.txt_chuthich);
-            this.groupBox1.Controls.Add(this.txt_makh);
             this.groupBox1.Controls.Add(this.btn_chitiethd);
             this.groupBox1.Controls.Add(this.btn_them);
             this.groupBox1.Controls.Add(this.btn_xoa);
@@ -133,19 +133,38 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(21, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1086, 188);
+            this.groupBox1.Size = new System.Drawing.Size(1086, 136);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Thông Tin";
             // 
-            // button1
+            // lb_khachhang
             // 
-            this.button1.Location = new System.Drawing.Point(647, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Xuất hóa đơn";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lb_khachhang.AutoSize = true;
+            this.lb_khachhang.Location = new System.Drawing.Point(6, 24);
+            this.lb_khachhang.Name = "lb_khachhang";
+            this.lb_khachhang.Size = new System.Drawing.Size(79, 16);
+            this.lb_khachhang.TabIndex = 23;
+            this.lb_khachhang.Text = "Khách Hàng";
+            // 
+            // cbb_khachhang
+            // 
+            this.cbb_khachhang.FormattingEnabled = true;
+            this.cbb_khachhang.Location = new System.Drawing.Point(113, 21);
+            this.cbb_khachhang.Name = "cbb_khachhang";
+            this.cbb_khachhang.Size = new System.Drawing.Size(174, 24);
+            this.cbb_khachhang.TabIndex = 22;
+            this.cbb_khachhang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbb_khachhang_KeyDown);
+            // 
+            // btn_xhd
+            // 
+            this.btn_xhd.Location = new System.Drawing.Point(647, 57);
+            this.btn_xhd.Name = "btn_xhd";
+            this.btn_xhd.Size = new System.Drawing.Size(186, 23);
+            this.btn_xhd.TabIndex = 21;
+            this.btn_xhd.Text = "Xuất hóa đơn";
+            this.btn_xhd.UseVisualStyleBackColor = true;
+            this.btn_xhd.Click += new System.EventHandler(this.btn_xhd_Click);
             // 
             // tongTien_txt
             // 
@@ -189,15 +208,6 @@
             this.txt_chuthi.TabIndex = 17;
             this.txt_chuthi.Text = "Chú thích";
             // 
-            // txt_s
-            // 
-            this.txt_s.AutoSize = true;
-            this.txt_s.Location = new System.Drawing.Point(6, 28);
-            this.txt_s.Name = "txt_s";
-            this.txt_s.Size = new System.Drawing.Size(101, 16);
-            this.txt_s.TabIndex = 16;
-            this.txt_s.Text = "Mã Khách Hàng";
-            // 
             // txt_x
             // 
             this.txt_x.AutoSize = true;
@@ -222,13 +232,6 @@
             this.txt_chuthich.Name = "txt_chuthich";
             this.txt_chuthich.Size = new System.Drawing.Size(204, 22);
             this.txt_chuthich.TabIndex = 10;
-            // 
-            // txt_makh
-            // 
-            this.txt_makh.Location = new System.Drawing.Point(113, 25);
-            this.txt_makh.Name = "txt_makh";
-            this.txt_makh.Size = new System.Drawing.Size(147, 22);
-            this.txt_makh.TabIndex = 9;
             // 
             // btn_chitiethd
             // 
@@ -294,10 +297,8 @@
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.TextBox txt_timkiem;
         private System.Windows.Forms.Label txt_chuthi;
-        private System.Windows.Forms.Label txt_s;
         private System.Windows.Forms.Label txt_x;
         private System.Windows.Forms.TextBox txt_chuthich;
-        private System.Windows.Forms.TextBox txt_makh;
         private System.Windows.Forms.Button btn_chitiethd;
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.Button btn_xoa;
@@ -311,6 +312,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYMUA;
         private System.Windows.Forms.DataGridViewTextBoxColumn CHUTHICH;
         private System.Windows.Forms.Label tongTien_txt;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_xhd;
+        private System.Windows.Forms.Label lb_khachhang;
+        private System.Windows.Forms.ComboBox cbb_khachhang;
     }
 }

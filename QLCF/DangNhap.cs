@@ -42,8 +42,9 @@ namespace QLCF
                 }
               
                 var DS = new DSQUANLY();
-                DS.Show();
                 this.Hide();
+                DS.Show();
+               
             }
             else
             {
