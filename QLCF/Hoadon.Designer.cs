@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.data_hoadon = new System.Windows.Forms.DataGridView();
-            this.MAHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NGAYMUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CHUTHICH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_khachhang = new System.Windows.Forms.Label();
             this.cbb_khachhang = new System.Windows.Forms.ComboBox();
@@ -51,6 +45,16 @@
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_sua = new System.Windows.Forms.Button();
+            this.MAHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MANV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TONGTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NGAYMUA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CHUTHICH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_hoadon)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,7 +65,9 @@
             this.data_hoadon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAHD,
             this.MANV,
+            this.TENNV,
             this.MAKH,
+            this.TENKH,
             this.TONGTIEN,
             this.NGAYMUA,
             this.CHUTHICH});
@@ -71,50 +77,11 @@
             this.data_hoadon.TabIndex = 10;
             this.data_hoadon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_hoadon_CellClick);
             // 
-            // MAHD
-            // 
-            this.MAHD.DataPropertyName = "MAHD";
-            this.MAHD.HeaderText = "Mã Hoá Đơn";
-            this.MAHD.Name = "MAHD";
-            this.MAHD.Width = 150;
-            // 
-            // MANV
-            // 
-            this.MANV.DataPropertyName = "MANV";
-            this.MANV.HeaderText = "Mã Nhân Viên";
-            this.MANV.Name = "MANV";
-            this.MANV.Width = 150;
-            // 
-            // MAKH
-            // 
-            this.MAKH.DataPropertyName = "MAKH";
-            this.MAKH.HeaderText = "Mã Khách Hàng";
-            this.MAKH.Name = "MAKH";
-            this.MAKH.Width = 150;
-            // 
-            // TONGTIEN
-            // 
-            this.TONGTIEN.DataPropertyName = "TONGTIEN";
-            this.TONGTIEN.HeaderText = "Tổng Tiền";
-            this.TONGTIEN.Name = "TONGTIEN";
-            // 
-            // NGAYMUA
-            // 
-            this.NGAYMUA.DataPropertyName = "NGAYMUA";
-            this.NGAYMUA.HeaderText = "Ngày Mua";
-            this.NGAYMUA.Name = "NGAYMUA";
-            this.NGAYMUA.Width = 190;
-            // 
-            // CHUTHICH
-            // 
-            this.CHUTHICH.DataPropertyName = "CHUTHICH";
-            this.CHUTHICH.HeaderText = "Chú Thích";
-            this.CHUTHICH.Name = "CHUTHICH";
-            this.CHUTHICH.Width = 330;
-            // 
             // groupBox1
             // 
             this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.button);
             this.groupBox1.Controls.Add(this.lb_khachhang);
             this.groupBox1.Controls.Add(this.cbb_khachhang);
             this.groupBox1.Controls.Add(this.btn_xhd);
@@ -152,7 +119,7 @@
             this.cbb_khachhang.FormattingEnabled = true;
             this.cbb_khachhang.Location = new System.Drawing.Point(113, 21);
             this.cbb_khachhang.Name = "cbb_khachhang";
-            this.cbb_khachhang.Size = new System.Drawing.Size(174, 24);
+            this.cbb_khachhang.Size = new System.Drawing.Size(154, 24);
             this.cbb_khachhang.TabIndex = 22;
             this.cbb_khachhang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbb_khachhang_KeyDown);
             // 
@@ -273,6 +240,80 @@
             this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
+            // MAHD
+            // 
+            this.MAHD.DataPropertyName = "MAHD";
+            this.MAHD.HeaderText = "Mã Hoá Đơn";
+            this.MAHD.Name = "MAHD";
+            // 
+            // MANV
+            // 
+            this.MANV.DataPropertyName = "MANV";
+            this.MANV.HeaderText = "Mã Nhân Viên";
+            this.MANV.Name = "MANV";
+            // 
+            // TENNV
+            // 
+            this.TENNV.DataPropertyName = "TENNV";
+            this.TENNV.HeaderText = "Tên Nhân Viên";
+            this.TENNV.Name = "TENNV";
+            this.TENNV.Width = 150;
+            // 
+            // MAKH
+            // 
+            this.MAKH.DataPropertyName = "MAKH";
+            this.MAKH.HeaderText = "Mã Khách Hàng";
+            this.MAKH.Name = "MAKH";
+            this.MAKH.Width = 150;
+            // 
+            // TENKH
+            // 
+            this.TENKH.DataPropertyName = "TENKH";
+            this.TENKH.HeaderText = "Tên Khách Hàng";
+            this.TENKH.Name = "TENKH";
+            this.TENKH.Width = 150;
+            // 
+            // TONGTIEN
+            // 
+            this.TONGTIEN.DataPropertyName = "TONGTIEN";
+            this.TONGTIEN.HeaderText = "Tổng Tiền";
+            this.TONGTIEN.Name = "TONGTIEN";
+            this.TONGTIEN.Width = 120;
+            // 
+            // NGAYMUA
+            // 
+            this.NGAYMUA.DataPropertyName = "NGAYMUA";
+            this.NGAYMUA.HeaderText = "Ngày Mua";
+            this.NGAYMUA.Name = "NGAYMUA";
+            this.NGAYMUA.Width = 150;
+            // 
+            // CHUTHICH
+            // 
+            this.CHUTHICH.DataPropertyName = "CHUTHICH";
+            this.CHUTHICH.HeaderText = "Chú Thích";
+            this.CHUTHICH.Name = "CHUTHICH";
+            this.CHUTHICH.Width = 200;
+            // 
+            // button
+            // 
+            this.button.Location = new System.Drawing.Point(273, 21);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(32, 25);
+            this.button.TabIndex = 24;
+            this.button.Text = "+";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.button_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(771, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 24);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Refesh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Hoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -305,15 +346,19 @@
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.DateTimePicker dt_ngaymua;
         private System.Windows.Forms.Label txt_ngay;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MANV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TONGTIEN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYMUA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CHUTHICH;
         private System.Windows.Forms.Label tongTien_txt;
         private System.Windows.Forms.Button btn_xhd;
         private System.Windows.Forms.Label lb_khachhang;
         private System.Windows.Forms.ComboBox cbb_khachhang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MANV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TONGTIEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NGAYMUA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CHUTHICH;
+        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button button1;
     }
 }

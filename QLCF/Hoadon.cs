@@ -39,7 +39,7 @@ namespace QLCF
         public void ketnoi()
         {
             cnn.Open();
-            string sql = "Select * from HOADON";
+            string sql = "Select MAHD,HOADON.MANV,HOADON.MAKH,TENNV,TENKH,TONGTIEN,NGAYMUA,CHUTHICH from HOADON,NHANVIEN,KHACHHANG where HOADON.MAKH = KHACHHANG.MAKH AND HOADON.MANV = NHANVIEN.MANV ";
             SqlCommand com = new SqlCommand(sql, cnn);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
@@ -237,12 +237,12 @@ namespace QLCF
         {
             int numrow;
             numrow = e.RowIndex;
-            idhd = int.Parse(data_hoadon.Rows[numrow].Cells[0].Value.ToString());
+            idhd = int.Parse(data_hoadon.Rows[numrow].Cells["MAHD"].Value.ToString());
            
-            cbb_khachhang.SelectedValue = data_hoadon.Rows[numrow].Cells[2].Value.ToString();
-            tongTien_txt.Text = data_hoadon.Rows[numrow].Cells[3].Value.ToString();
-            dt_ngaymua.Text = data_hoadon.Rows[numrow].Cells[4].Value.ToString();
-            txt_chuthich.Text = data_hoadon.Rows[numrow].Cells[5].Value.ToString();
+            cbb_khachhang.SelectedValue = data_hoadon.Rows[numrow].Cells["TENKH"].Value.ToString();
+            tongTien_txt.Text = data_hoadon.Rows[numrow].Cells["TONGTIEN"].Value.ToString();
+            dt_ngaymua.Text = data_hoadon.Rows[numrow].Cells["NGAYMUA"].Value.ToString();
+            txt_chuthich.Text = data_hoadon.Rows[numrow].Cells["CHUTHICH"].Value.ToString();
         }
         void cleanData()
         {
@@ -432,7 +432,7 @@ namespace QLCF
                 para5.Range.InsertParagraphAfter();
 
                 //Save the document  
-                object filename = @"c:\temp1.docx";
+                object filename = @":\temp1.docx";
                 document.SaveAs2(ref filename);
                 document.Close(ref missing, ref missing, ref missing);
                 document = null;
@@ -445,6 +445,18 @@ namespace QLCF
             //{
             //    MessageBox.Show(ex.Message);
             //}
+        }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+            Khachhang KH = new Khachhang();
+            KH.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ketnoi();
+            loadcbbKH();
         }
     }
 }
