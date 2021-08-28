@@ -36,13 +36,13 @@ namespace QLCF
         private Hoadon hd;
         public void ketnoi()
         {
-            try
-            {
+            //try
+            //{
                 int idhd = hd.getmahd();
                 txt_mahd.Text = idhd.ToString();
                 open();
                 ///////
-                string queryString = "Select * from CTHOADON where MAHD ='" + idhd + "'";
+                string queryString = "Select MAHD,CTHOADON.MASP,TENSP,SOLUONG,CTHOADON.GIA,THANHTIEN from CTHOADON,SANPHAM where MAHD ='" + idhd + "' AND CTHOADON.MASP = SANPHAM.MASP";
 
                 var l = new List<Model.CTHOADON>();
                 SqlCommand command = new SqlCommand(queryString, cnn);
@@ -54,6 +54,7 @@ namespace QLCF
                         var r = new Model.CTHOADON();
                         r.MAHD = reader["MAHD"] is DBNull ? "" : reader["MAHD"].ToString();
                         r.MASP = reader["MASP"] is DBNull ? "" : reader["MASP"].ToString();
+                        r.TENSP = reader["TENSP"] is DBNull ? "" : reader["TENSP"].ToString();
                         r.SOLUONG = reader["SOLUONG"] is DBNull ? 0 : int.Parse(reader["SOLUONG"].ToString());
                         r.GIA = reader["GIA"] is DBNull ? 0 : int.Parse(reader["GIA"].ToString());
                         r.THANHTIEN = reader["THANHTIEN"] is DBNull ? 0 : int.Parse(reader["THANHTIEN"].ToString());
@@ -66,12 +67,12 @@ namespace QLCF
                 }
                 data_cthd.DataSource = l;
                 close();
-            }
-            catch
-            {
-                MessageBox.Show("Kết nối  không thành công !!!");
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Kết nối  không thành công !!!");
 
-            }
+            //}
 
         }
         List<Model.SANPHAM> l = new List<Model.SANPHAM>();

@@ -82,6 +82,7 @@
     <Compile Include="Khachhang.Designer.cs">
       <DependentUpon>Khachhang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Microsoft\Office\Interop\Word\WordApplication.cs" />
     <Compile Include="Model\model.cs" />
     <Compile Include="NhanVien.cs">
       <SubType>Form</SubType>

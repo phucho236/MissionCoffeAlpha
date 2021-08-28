@@ -4,13 +4,15 @@ using BASE_SERVICE;
 using BASE_QUERY;
 using System.Data.SqlClient;
 using System.Data;
-using System.Windows.Forms;
+
+
+
 
 namespace SERVICE_QUERY
 {
     public class ServiceQuery : BaseService
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-6QVO0BO\SQLEXPRESS;Initial Catalog=QUANLYCAPHE;Integrated Security=True;User ID=sa;Password=123");
+        SqlConnection conn = new SqlConnection(QLCF.connection.getconnect());
 
         BaseQuery baseQuery = new BaseQuery();
         void openConn()

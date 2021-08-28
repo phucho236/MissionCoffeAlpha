@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.data_cthd = new System.Windows.Forms.DataGridView();
-            this.MAHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.THANHTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_thanhtien = new System.Windows.Forms.Label();
             this.cbb_sanpham = new System.Windows.Forms.ComboBox();
@@ -49,6 +44,12 @@
             this.btn_xoa = new System.Windows.Forms.Button();
             this.txt_mahd = new System.Windows.Forms.TextBox();
             this.btn_sua = new System.Windows.Forms.Button();
+            this.MAHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MASP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TENSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.THANHTIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data_cthd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +60,7 @@
             this.data_cthd.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MAHD,
             this.MASP,
+            this.TENSP,
             this.SOLUONG,
             this.GIA,
             this.THANHTIEN});
@@ -67,40 +69,6 @@
             this.data_cthd.Size = new System.Drawing.Size(784, 316);
             this.data_cthd.TabIndex = 12;
             this.data_cthd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_cthd_CellClick);
-            // 
-            // MAHD
-            // 
-            this.MAHD.DataPropertyName = "MAHD";
-            this.MAHD.HeaderText = "Mã Hoá Đơn";
-            this.MAHD.Name = "MAHD";
-            this.MAHD.Width = 150;
-            // 
-            // MASP
-            // 
-            this.MASP.DataPropertyName = "MASP";
-            this.MASP.HeaderText = "Mã Sản Phẩm";
-            this.MASP.Name = "MASP";
-            this.MASP.Width = 150;
-            // 
-            // SOLUONG
-            // 
-            this.SOLUONG.DataPropertyName = "SOLUONG";
-            this.SOLUONG.HeaderText = "Số Lượng";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.Width = 150;
-            // 
-            // GIA
-            // 
-            this.GIA.DataPropertyName = "GIA";
-            this.GIA.HeaderText = "Giá";
-            this.GIA.Name = "GIA";
-            // 
-            // THANHTIEN
-            // 
-            this.THANHTIEN.DataPropertyName = "THANHTIEN";
-            this.THANHTIEN.HeaderText = "Thành Tiền";
-            this.THANHTIEN.Name = "THANHTIEN";
-            this.THANHTIEN.Width = 190;
             // 
             // groupBox1
             // 
@@ -254,6 +222,46 @@
             this.btn_sua.UseVisualStyleBackColor = true;
             this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
             // 
+            // MAHD
+            // 
+            this.MAHD.DataPropertyName = "MAHD";
+            this.MAHD.HeaderText = "Mã Hoá Đơn";
+            this.MAHD.Name = "MAHD";
+            this.MAHD.Width = 150;
+            // 
+            // MASP
+            // 
+            this.MASP.DataPropertyName = "MASP";
+            this.MASP.HeaderText = "Mã Sản Phẩm";
+            this.MASP.Name = "MASP";
+            this.MASP.Width = 150;
+            // 
+            // TENSP
+            // 
+            this.TENSP.DataPropertyName = "TENSP";
+            this.TENSP.HeaderText = "Tên sản phẩm";
+            this.TENSP.Name = "TENSP";
+            // 
+            // SOLUONG
+            // 
+            this.SOLUONG.DataPropertyName = "SOLUONG";
+            this.SOLUONG.HeaderText = "Số Lượng";
+            this.SOLUONG.Name = "SOLUONG";
+            this.SOLUONG.Width = 150;
+            // 
+            // GIA
+            // 
+            this.GIA.DataPropertyName = "GIA";
+            this.GIA.HeaderText = "Giá";
+            this.GIA.Name = "GIA";
+            // 
+            // THANHTIEN
+            // 
+            this.THANHTIEN.DataPropertyName = "THANHTIEN";
+            this.THANHTIEN.HeaderText = "Thành Tiền";
+            this.THANHTIEN.Name = "THANHTIEN";
+            this.THANHTIEN.Width = 190;
+            // 
             // CTHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,13 +294,14 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.TextBox txt_mahd;
         private System.Windows.Forms.Button btn_sua;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAHD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN;
         private System.Windows.Forms.Label a;
         private System.Windows.Forms.ComboBox cbb_sanpham;
         private System.Windows.Forms.Label txt_thanhtien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAHD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MASP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn THANHTIEN;
     }
 }

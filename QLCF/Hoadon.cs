@@ -193,7 +193,11 @@ namespace QLCF
         {
             try
             {
-
+                if (idhd == 0)
+                {
+                    MessageBox.Show("Vui lòng chọn hóa đơn");
+                    return;
+                }
                 cnn.Open();
                 string sql = @"Delete FROM HOADON  Where (MAHD = '" + idhd + "')";
                 SqlCommand com = new SqlCommand(sql, cnn);
@@ -208,9 +212,8 @@ namespace QLCF
             catch
             {
                 MessageBox.Show("Xoá không thành công !!!");
-
             }
-        }
+}
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
@@ -238,8 +241,7 @@ namespace QLCF
             int numrow;
             numrow = e.RowIndex;
             idhd = int.Parse(data_hoadon.Rows[numrow].Cells["MAHD"].Value.ToString());
-           
-            cbb_khachhang.SelectedValue = data_hoadon.Rows[numrow].Cells["TENKH"].Value.ToString();
+            cbb_khachhang.SelectedValue = data_hoadon.Rows[numrow].Cells["MAKH"].Value.ToString();
             tongTien_txt.Text = data_hoadon.Rows[numrow].Cells["TONGTIEN"].Value.ToString();
             dt_ngaymua.Text = data_hoadon.Rows[numrow].Cells["NGAYMUA"].Value.ToString();
             txt_chuthich.Text = data_hoadon.Rows[numrow].Cells["CHUTHICH"].Value.ToString();
@@ -289,7 +291,7 @@ namespace QLCF
             var listCTHDTMP = new List<Model.CTHOADON>();
             open();
             ///////
-            string queryString = "Select * from CTHOADON where MAHD ='" + id + "'";
+            string queryString = "Select MAHD,CTHOADON.MASP,TENSP,SOLUONG,CTHOADON.GIA,THANHTIEN from CTHOADON,SANPHAM where MAHD ='" + idhd + "' AND CTHOADON.MASP = SANPHAM.MASP";
             SqlCommand command = new SqlCommand(queryString, cnn);
             SqlDataReader reader = command.ExecuteReader();
             try
@@ -299,6 +301,7 @@ namespace QLCF
                     var r = new Model.CTHOADON();
                     r.MAHD = reader["MAHD"] is DBNull ? "" : reader["MAHD"].ToString();
                     r.MASP = reader["MASP"] is DBNull ? "" : reader["MASP"].ToString();
+                    r.TENSP = reader["TENSP"] is DBNull ? "" : reader["TENSP"].ToString();
                     r.SOLUONG = reader["SOLUONG"] is DBNull ? 0 : int.Parse(reader["SOLUONG"].ToString());
                     r.GIA = reader["GIA"] is DBNull ? 0 : int.Parse(reader["GIA"].ToString());
                     r.THANHTIEN = reader["THANHTIEN"] is DBNull ? 0 : int.Parse(reader["THANHTIEN"].ToString());
@@ -315,8 +318,8 @@ namespace QLCF
         }
         private void CreateDocument(Model.KHACHHANG modelKh,string ngayMua, string tongHD, List<Model.CTHOADON> listCTHD )
         {
-            //try
-            //{
+            try
+            {
                 //Create an instance for word app  
                 Microsoft.Office.Interop.Word.Application winword = new Microsoft.Office.Interop.Word.Application();
 
@@ -355,9 +358,7 @@ namespace QLCF
                     footerRange.Text = "Cám ơn và hẹn gặp lại";
                 }
 
-                //adding text to document  
-                //document.Content.SetRange(0, 0);
-                //document.Content.Text = "Content " + Environment.NewLine;
+                
 
 
                 //style
@@ -418,7 +419,7 @@ namespace QLCF
                         else
                         {
                             if(cell.ColumnIndex == 1)
-                            cell.Range.Text = listCTHD[cell.RowIndex-2].MASP ;
+                            cell.Range.Text = listCTHD[cell.RowIndex-2].TENSP ;
                             if (cell.ColumnIndex == 2)
                                 cell.Range.Text = listCTHD[cell.RowIndex-2].SOLUONG.ToString();
                             if (cell.ColumnIndex == 3)
@@ -431,20 +432,34 @@ namespace QLCF
                 para5.Range.Text = "Thành tiền: " + tongHD + "  ";
                 para5.Range.InsertParagraphAfter();
 
-                //Save the document  
-                object filename = @":\temp1.docx";
-                document.SaveAs2(ref filename);
-                document.Close(ref missing, ref missing, ref missing);
-                document = null;
-                winword.Quit(ref missing, ref missing, ref missing);
-                winword = null;
+
+                string nameFile = "HD"+idhd+"_"+ modelKh.TENKH+ "_" + DateTime.Now.ToString("hh-mm-ss_dd-MM-yyyy") +"";
+                object filepath = @"c:\"+ RemoveUnicode(nameFile) +".docx";
+                document.SaveAs2(ref filepath);
+
+
+                //open word
+                winword.Documents.Open(ref filepath,
+                     ref missing, ref missing, ref missing, ref missing,
+                     ref missing, ref missing, ref missing, ref missing,
+                     ref missing, ref missing, ref missing, ref missing,
+                     ref missing, ref missing, ref missing);
+
+                //if dont open can set null 
+                //winword.Quit(ref missing, ref missing, ref missing);
+                //winword = null;
+                //document.Close(ref missing, ref missing, ref missing);
+                //document = null;
                 MessageBox.Show("Document created successfully !");
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button_Click(object sender, EventArgs e)
