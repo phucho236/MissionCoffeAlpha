@@ -315,7 +315,7 @@
             this.Controls.Add(this.data_khachhang);
             this.Controls.Add(this.groupBox1);
             this.Name = "Khachhang";
-            this.Text = "Khachhang";
+            this.Text = "QUẢN LÝ KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.Khachhang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_khachhang)).EndInit();
             this.groupBox1.ResumeLayout(false);

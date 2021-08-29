@@ -236,7 +236,7 @@
             this.Controls.Add(this.data_sanpham);
             this.Controls.Add(this.groupBox1);
             this.Name = "SanPham";
-            this.Text = "SanPham";
+            this.Text = "QUẢN LÝ SẢN PHẨM";
             this.Load += new System.EventHandler(this.SanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_sanpham)).EndInit();
             this.groupBox1.ResumeLayout(false);

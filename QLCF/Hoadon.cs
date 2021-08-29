@@ -434,7 +434,7 @@ namespace QLCF
 
 
                 string nameFile = "HD"+idhd+"_"+ modelKh.TENKH+ "_" + DateTime.Now.ToString("hh-mm-ss_dd-MM-yyyy") +"";
-                object filepath = @"c:\"+ RemoveUnicode(nameFile) +".docx";
+                object filepath = @"d:\"+ RemoveUnicode(nameFile) +".docx";
                 document.SaveAs2(ref filepath);
 
 

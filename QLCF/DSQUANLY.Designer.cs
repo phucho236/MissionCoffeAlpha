@@ -31,12 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_nhanvien = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btn_sanpham = new System.Windows.Forms.Button();
-            this.btn_khachhang = new System.Windows.Forms.Button();
             this.btn_hoadon = new System.Windows.Forms.Button();
+            this.btn_khachhang = new System.Windows.Forms.Button();
+            this.btn_sanpham = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,42 +76,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DANH SÁCH QUẢN LÝ";
             // 
-            // label2
+            // btn_hoadon
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "QUẢN LÝ SẢN PHẨM";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "QUẢN LÝ KHÁCH HÀNG";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 241);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "QUẢN LÝ HOÁ ĐƠN ";
-            // 
-            // btn_sanpham
-            // 
-            this.btn_sanpham.Location = new System.Drawing.Point(184, 113);
-            this.btn_sanpham.Name = "btn_sanpham";
-            this.btn_sanpham.Size = new System.Drawing.Size(75, 23);
-            this.btn_sanpham.TabIndex = 6;
-            this.btn_sanpham.Text = "SẢN PHẨM";
-            this.btn_sanpham.UseVisualStyleBackColor = true;
-            this.btn_sanpham.Click += new System.EventHandler(this.btn_sanpham_Click);
+            this.btn_hoadon.Location = new System.Drawing.Point(184, 231);
+            this.btn_hoadon.Name = "btn_hoadon";
+            this.btn_hoadon.Size = new System.Drawing.Size(75, 23);
+            this.btn_hoadon.TabIndex = 8;
+            this.btn_hoadon.Text = "HOÁ ĐƠN";
+            this.btn_hoadon.UseVisualStyleBackColor = true;
+            this.btn_hoadon.Click += new System.EventHandler(this.btn_hoadon_Click);
             // 
             // btn_khachhang
             // 
@@ -123,15 +96,42 @@
             this.btn_khachhang.UseVisualStyleBackColor = true;
             this.btn_khachhang.Click += new System.EventHandler(this.btn_khachhang_Click);
             // 
-            // btn_hoadon
+            // btn_sanpham
             // 
-            this.btn_hoadon.Location = new System.Drawing.Point(184, 231);
-            this.btn_hoadon.Name = "btn_hoadon";
-            this.btn_hoadon.Size = new System.Drawing.Size(75, 23);
-            this.btn_hoadon.TabIndex = 8;
-            this.btn_hoadon.Text = "HOÁ ĐƠN";
-            this.btn_hoadon.UseVisualStyleBackColor = true;
-            this.btn_hoadon.Click += new System.EventHandler(this.btn_hoadon_Click);
+            this.btn_sanpham.Location = new System.Drawing.Point(184, 113);
+            this.btn_sanpham.Name = "btn_sanpham";
+            this.btn_sanpham.Size = new System.Drawing.Size(75, 23);
+            this.btn_sanpham.TabIndex = 6;
+            this.btn_sanpham.Text = "SẢN PHẨM";
+            this.btn_sanpham.UseVisualStyleBackColor = true;
+            this.btn_sanpham.Click += new System.EventHandler(this.btn_sanpham_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 241);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "QUẢN LÝ HOÁ ĐƠN ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "QUẢN LÝ KHÁCH HÀNG";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 118);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "QUẢN LÝ SẢN PHẨM";
             // 
             // DSQUANLY
             // 
@@ -140,7 +140,7 @@
             this.ClientSize = new System.Drawing.Size(344, 367);
             this.Controls.Add(this.groupBox1);
             this.Name = "DSQUANLY";
-            this.Text = "DSQUANLY";
+            this.Text = "DANH SÁCH QUẢN LÝ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
